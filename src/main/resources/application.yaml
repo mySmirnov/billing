@@ -4,3 +4,11 @@ spring:
        matching-strategy: ant_path_matcher
   server:
     port: 8080
+  liquibase:
+    change-log: classpath:db\changelog\db.changelog-master.yaml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user
+    username: postgres
+    password: 1234
+    hikari:
+      maximum-pool-size: 3
